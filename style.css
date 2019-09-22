@@ -23,7 +23,7 @@
 #news {
 	position: relative;
 	/* overflow: hidden; */
-	height: 150vh;
+	height: 100vh;
 	display: flex;
 }
 
