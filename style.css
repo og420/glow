@@ -2,3 +2,40 @@
 #glow_header {
 	display: flex;
 }
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.dummy_box {
+	width: 180px;
+	height: 240px;
+	background-color: #eee;
+	margin: 0 15px 0 0;
+}
+
+.mv_posts_container {
+	display: flex;
+}
+
+#news {
+	position: relative;
+	/* overflow: hidden; */
+	height: 150vh;
+	display: flex;
+}
+
+.news_right_container {
+	position: absolute;
+	right: 0;
+	z-index: -1;
+}
+
+.news_posts_container {
+	width: 100%;
+	display: flex;
+	background-image: url('http://placehold.jp/150x50.png');
+	background-size: contain;
+}
