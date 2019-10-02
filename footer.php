@@ -16,7 +16,6 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div>ホゲホゲ</div>
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

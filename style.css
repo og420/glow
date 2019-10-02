@@ -1,4 +1,17 @@
 @charset "UTF-8";
+
+/*
+theme Name: GLOW Theme
+Author: OG
+Description: GLOW Original Theme
+version： 1.0.0
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
 #glow_header {
 	display: flex;
 }
@@ -38,4 +51,122 @@
 	display: flex;
 	background-image: url('http://placehold.jp/150x50.png');
 	background-size: contain;
+}
+
+/*
+======================================
+statement
+======================================
+*/
+
+.stmt{
+ position: relative;
+ width: 100%;
+ height: 100%;
+}
+
+.stmt--slide_1{
+	background: url(imgs/stmt1.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+.stmt--slide_2{
+	background: url(imgs/stmt2.png);
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stmt--slide_3{
+	background: url(imgs/stmt3.png);
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stmt--slide_4{
+	background: url(imgs/stmt4.png);
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.stmt--slide_5{
+	background: url(imgs/stmt5.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+.stmt__text{
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+.stmt__text--layout_A{
+	width: 640px;
+	position: absolute;
+	top: 120px;
+	left: 120px;
+}
+
+.stmt__text--layout_B{
+	width: 830px;
+	position: absolute;
+	bottom: 160px;
+	right: 120px;
+}
+
+.stmt__text--layout_C{
+	text-align: center;
+}
+
+.stmt__text--layout_D{
+	margin-right: 40px;
+}
+
+.stmt__text--type_A{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.stmt__text--type_B{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.stmt__text--type_C{
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.stmt__text--type_D{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.stmt__text--deco_underline{
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+
+.stmt__text--deco_underline::after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	bottom: 4px;
+	left: 0;
+	width: 100%;
+	height: 16%;
+	background-color: #206a00;
+	opacity: 0.8;
+	z-index: -1;
 }
