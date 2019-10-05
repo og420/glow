@@ -9,15 +9,45 @@
 	clear: both;
 }
 
+/* ---------- main ----------- */
+#main {
+	background: #aaa;
+	position: relative;
+}
+
+.mv_slide {
+}
+
+.mv_slide div {
+	background: url('http://placehold.jp/1200x600.png');
+	background-size: cover;
+	height:800px;
+}
+
+.slick-prev.slick-arrow {
+	left: 5px;
+	z-index: 999;
+}
+
+.slick-next.slick-arrow {
+	right: 5px;
+	z-index: 999;
+}
+
 .dummy_box {
-	width: 180px;
-	height: 240px;
+	width:300px;
+	height: 420px;
 	background-color: #eee;
-	margin: 0 15px 0 0;
 }
 
 .mv_posts_container {
+	position: sticky;
+	width: 80%;
 	display: flex;
+	justify-content: space-between;
+	padding: 0 0 150px 0;
+	margin: -250px auto 0;
+	z-index: 999;
 }
 
 #news {

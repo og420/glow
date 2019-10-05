@@ -33,7 +33,11 @@ get_header();
   </div>
 </header>
 <section id='main'>
-  <div class='mv_slide'></div>
+  <div class='mv_slide'>
+    <div>ホゲホゲ</div>
+    <div>ホゲホゲ</div>
+    <div>ホゲホゲ</div>
+  </div>
   <div class='mv_posts_container'>
     <div class='mv_post_box dummy_box'></div>
     <div class='mv_post_box dummy_box'></div>
