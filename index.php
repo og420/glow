@@ -70,5 +70,12 @@ get_header();
 <section id='medical'></section>
 <section id='medical_post'></section>
 <section id='about_us'></section>
+
+<!-- slick script -->
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.mv_slide').slick();
+});
+</script>
 <?php
 get_footer();
