@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/* common */
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.mb30 { margin-bottom: 30px; }
+.mb40 { margin-bottom: 40px; }
+.mb50 { margin-bottom: 50px; }
+
+
 #glow_header {
 	display: flex;
 }
@@ -50,17 +58,34 @@
 	z-index: 999;
 }
 
+/* ---------- news ---------- */
 #news {
 	position: relative;
-	/* overflow: hidden; */
-	height: 100vh;
 	display: flex;
+	background: #999;
+}
+
+.news-inner {
+	padding: 50px 0 100px 300px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.news_left_container {
+	width: 56%;
+	position: sticky;
+	z-index: 1;
 }
 
 .news_right_container {
-	position: absolute;
+	margin: 150px 0 0 -200px;
+	position: sticky;
 	right: 0;
-	z-index: -1;
+	z-index: 0;
+}
+
+.news_right_container img {
+	display: block;
 }
 
 .news_posts_container {
@@ -68,4 +93,71 @@
 	display: flex;
 	background-image: url('http://placehold.jp/150x50.png');
 	background-size: contain;
+}
+
+.news_heading {
+	margin: 0 0 100px 0;
+}
+
+.news_main_text {
+	background: #000;
+	color: #fff;
+	padding: 20px 30px;
+}
+
+.news_main_text p {
+	margin: 0;
+	line-height: 1.8;
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 7px;
+}
+
+.news_description {
+	width: 70%;
+	padding: 50px 0 0 0;
+}
+
+.news_description p {
+	line-height: 2;
+	color: #333;
+	font-size: 0.9rem;
+}
+
+.news_read_more {
+	margin: 100px 0 0 0;
+}
+
+.news_read_more p::before {
+	display: inline-block;
+	content: '';
+	background: #000;
+	height: 2px;
+	width: 24rem;
+	margin: 0 2rem 6px 0;
+}
+
+.news_read_more p {
+	font-weight: bold;
+	letter-spacing: 7px;
+}
+
+/* ---------- news posts ---------- */
+#news_posts {
+	background: #888;
+}
+
+/* ---------- medical ---------- */
+#medical {
+	background: #777;
+}
+
+/* ---------- medical_post ---------- */
+#medical_post{
+	background: #666;
+}
+
+/* ---------- about_us ---------- */
+#about_us {
+	background: #555;
 }

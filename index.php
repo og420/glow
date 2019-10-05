@@ -46,20 +46,23 @@ get_header();
   </div>
 </section>
 <section id='news' clas='clearfix'>
-  <div class='news_left_container'>
-    <h2 class='news_heading'>NEWS</h2>
-    <div class='news_subtext'>
-      <p>2020年大麻合法化。</p>
-      <p>今世界で起きているグリーンラッシュと</p>
-      <p>日本の未来の話。</p>
+  <div class='news-inner'>
+    <div class='news_left_container'>
+      <div class='news_heading'><img src='http://placehold.jp/300x100.png' alt=''></div>
+      <div class='news_main_text'>
+        <p>2020年大麻合法化。</p>
+        <p>今世界で起きているグリーンラッシュと</p>
+        <p>日本の未来の話。</p>
+      </div>
+      <div class='news_description'>
+        <p class='mb30'>そこはほか依然としてその意味痛によってのの以上にするですない。とにかく今日をお話家はもしそのままほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨ</p>
+        <p>そこはほか依然としてその意味痛によってのの以上にするですない。とにかく今日をお話家はもしそのままほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨ</p>
+      </div>
+      <div class='news_read_more'><p>READ MORE</p></div>
     </div>
-    <div class='news_description'>
-      <p></p>
+    <div class='news_right_container'>
+      <img src='http://placehold.jp/700x600.png' alt=''>
     </div>
-    <div class='news_read_more'>READ MORE</div>
-  </div>
-  <div class='news_right_container'>
-    <img src='http://placehold.jp/600x600.png' alt=''>
   </div>
 </section>
 <section id='news_posts'>
