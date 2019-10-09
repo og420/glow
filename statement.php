@@ -111,8 +111,10 @@ Template Name: statement
         ただ、こんな調査を語るまでもないかもしれない。<br>
       </span>
     </p>
-    <img class="wow fadeIn" data-wow-delay="4s" src="<?php echo get_template_directory_uri();?>/imgs/happiness-ranking.png" alt="世界幸福度ランキング" style="margin-right:28px">
-    <img class="wow fadeIn" data-wow-delay="4.5s" src="<?php echo get_template_directory_uri();?>/imgs/demo-ranking.png" alt="世界民主主義ランキング">
+    <div class="stmt__reference-img">
+      <img class="wow fadeIn" data-wow-delay="4s" src="<?php echo get_template_directory_uri();?>/imgs/happiness-ranking.png" alt="世界幸福度ランキング">
+      <img class="wow fadeIn" data-wow-delay="4.5s" src="<?php echo get_template_directory_uri();?>/imgs/demo-ranking.png" alt="世界民主主義ランキング">
+    </div>
   </section>
 </div>
 <div class="section">
@@ -177,7 +179,9 @@ Template Name: statement
         だからこそ我々「GLOW」は、<br><br>
       </span>
       <span class="stmt__text--type_C stmt__text--deco_underline wow fadeIn" data-wow-delay="3s">
-        この国の⺠主主義を再機能させたい。
+        この国の⺠主主義を</span><br>
+      <span class="stmt__text--type_C stmt__text--deco_underline wow fadeIn" data-wow-delay="3s">
+        再機能させたい。
       </span>
     </p>
   </section>
@@ -185,33 +189,33 @@ Template Name: statement
 <div class="section">
   <section class="stmt stmt--slide_9">
     <p class="stmt__text stmt__text--layout_D">
-    <span class="stmt__text--type_B wow fadeIn" data-wow-delay="1s">
-      まずは大麻合法化の是非について問いかけることを、<br>
-      そのために最適なトピックに決めた。</span><br><br>
-    <span class="wow fadeIn" data-wow-delay="2s">
-      理由は下記の通り、</span><br><br>
-    <span class="stmt__text--deco_listdot wow fadeIn" data-wow-delay="3s">
-      誰もがほんの少し努力して情報を集めていけば、<br>
-      自分なりの意見を持つことが簡単な議題で、</span><br><br>
-    <span class="stmt__text--deco_listdot wow fadeIn" data-wow-delay="4s">
-      全国⺠の間で、民主的議論を巻き起こせる可能性を大きく秘めていると考えるからだ。</span><br><br>
-    <span class="wow fadeIn" data-wow-delay="5s">
-      アメリカの各州やカナダを筆頭に、合法化による社会への影響の検証はかなり進んでいる。<br>
-      身体への影響の研究も同様だ。</span><br><br>
-    <span class="stmt__text--deco_underline wow fadeIn" data-wow-delay="6s">
-      事実、2018年にWHO（世界保健機関）は、大麻の危険性に関する見解の基準を引き下げた。</span><br><br>
-    <span class="stmt__text--deco_underline wow fadeIn" data-wow-delay="6s">
-      議論に必要な情報はもう十分に揃ってきているし、我々も発信していく。</span><br>
-    <span class="stmt__text--deco_underline wow fadeIn" data-wow-delay="6s">
-      あとは各々意見をもつだけだ。</span><br><br>
-    <span class="wow fadeIn" data-wow-delay="7s">
-    もちろん日本においては、大麻は戦後長らくタブーとされてきた背景がある。<br>
-    しかし、昨今不倫やゴシップ報道で溢れかえっていることからも明らかなように、<br>
-    人は禁じられたものにこそ強く惹かれる生き物だ。<br><br>
+      <span class="stmt__text--type_B wow fadeIn" data-wow-delay="1s">
+        まずは大麻合法化の是非について問いかけることを、<br>
+        そのために最適なトピックに決めた。</span><br><br>
+      <span class="wow fadeIn" data-wow-delay="2s">
+        理由は下記の通り、</span><br><br>
+      <span class="stmt__text--deco_listdot wow fadeIn" data-wow-delay="3s">
+        誰もがほんの少し努力して情報を集めていけば、<br>
+        自分なりの意見を持つことが簡単な議題で、</span><br><br>
+      <span class="stmt__text--deco_listdot wow fadeIn" data-wow-delay="4s">
+        全国⺠の間で、民主的議論を巻き起こせる可能性を大きく秘めていると考えるからだ。</span><br><br>
+      <span class="wow fadeIn" data-wow-delay="5s">
+        アメリカの各州やカナダを筆頭に、合法化による社会への影響の検証はかなり進んでいる。<br>
+        身体への影響の研究も同様だ。</span><br><br>
+      <span class="stmt__text--deco_underline wow fadeIn" data-wow-delay="6s">
+        事実、2018年にWHO（世界保健機関）は、大麻の危険性に関する見解の基準を引き下げた。</span><br><br>
+      <span class="stmt__text--deco_underline wow fadeIn" data-wow-delay="6s">
+        議論に必要な情報はもう十分に揃ってきているし、我々も発信していく。</span><br>
+      <span class="stmt__text--deco_underline wow fadeIn" data-wow-delay="6s">
+        あとは各々意見をもつだけだ。</span><br><br>
+      <span class="wow fadeIn" data-wow-delay="7s">
+      もちろん日本においては、大麻は戦後長らくタブーとされてきた背景がある。<br>
+      しかし、昨今不倫やゴシップ報道で溢れかえっていることからも明らかなように、<br>
+      人は禁じられたものにこそ強く惹かれる生き物だ。<br><br>
 
-    真実が白日の元に晒されれば、全日本国⺠の間で話題になるのは時間の問題だと考える。</span>
+      真実が白日の元に晒されれば、全日本国⺠の間で話題になるのは時間の問題だと考える。</span>
     </p>
-    <p class="stmt__reference">
+    <p class="stmt__reference wow fadeIn" data-wow-delay="6.5s">
       19年1月24日、国連事務総長宛ての手紙で、WHO事務局長のAntonio Guterresは、国際薬物条約内で提案されているスケジュール変更について国連に通知した。次のステップは、19年3月あるいは20年3月の国連麻薬委員会（CDN)でその勧告を受けての53か国による投票採決となります。
       大麻草を規制している国際条約は、1961 年の麻薬に関する単一条約（麻薬単一条約）、1971 年の向精神薬に関する条約（向精神薬条約）、1988 年の麻薬及び向精神薬の不正取引の防止に関する国際連合条約（麻薬新条約）の３つがあります。
       スケジュール・リストとは、国際的に薬物統制するシステムのことであり、WHO（世界保健機関）の ECDD(依存性薬物専門家委員会)が薬物の有害性や医療価値についての評価を行っています。
