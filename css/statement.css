@@ -14,6 +14,7 @@ statement
  flex-wrap: wrap;
  justify-content: center;
  align-items: center;
+ box-sizing: border-box;
 }
 
 .stmt--slide_1{
