@@ -1,24 +1,35 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since 1.0.0
- */
+	<footer class="footer">
+		<p class="footer__quote">
+			大麻合法化の是非について考えることは、
+			あなた自身の幸福について考えることだ。
+		</p>
+		<span class="footer__quoteAuthor">GLOW</span>
 
-?>
+		<div class="footer__nav">
+			<div class="footer__categories">
+				<ul>
+					<?php
+					$args = array(
+							'orderby' => 'count',
+							'order' => 'DSC'
+					);
+					$categories = get_categories( $args );
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-	</footer><!-- #colophon -->
-
-</div><!-- #page -->
+					foreach( $categories as $category ){
+						echo '<li><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a> </li> ';
+					}
+					?>
+				</ul>
+			</div>
+			<div  class="footer__otherLinks">
+				<ul>
+					<li><a href="#" target="_blank">当メディアについて</a>
+					<li><a href="#" target="_blank">ご利用規約</a>
+					<li><a href="#" target="_blank">プライバシーポリシー</a>
+				</ul>
+			</div>
+		</div>
+	</footer>
 
 <?php wp_footer(); ?>
 

@@ -9,13 +9,15 @@
 
 new WOW().init();
 
-// fullpage js
 jQuery(function($){
+
+// fullpage js
 
 $('#fullpage').fullpage({
   //options here
   scrollBar: true,
   autoScrolling: true,
-  scrollHorizontally: true
+  scrollHorizontally: true,
+  paddinTop: '80px'
 });
 });
