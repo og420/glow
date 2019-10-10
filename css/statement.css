@@ -1,0 +1,249 @@
+/*
+======================================
+statement
+======================================
+*/
+
+.stmt{
+ position: relative;
+ width: 100%;
+ height: 100%;
+ background-size: cover;
+ background-position: center center;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ box-sizing: border-box;
+}
+
+.stmt--slide_1{
+  background: url(../imgs/stmt1.png);
+  display: block;
+}
+
+.stmt--slide_2{
+	background: url(../imgs/stmt2.png);
+}
+
+.stmt--slide_3{
+	background: url(../imgs/stmt3.png);
+}
+
+.stmt--slide_4{
+	background: url(../imgs/stmt4.png);
+}
+
+.stmt--slide_5{
+	background: url(../imgs/stmt5.png);
+}
+
+.stmt--slide_6{
+	background: url(../imgs/stmt6.png);
+}
+
+.stmt--slide_7{
+	background: url(../imgs/stmt7.png);
+}
+
+.stmt--slide_8{
+	background: url(../imgs/stmt8.png);
+}
+
+.stmt--slide_9{
+  background: url(../imgs/stmt9.png);
+}
+
+.stmt--slide_10{
+	background: url(../imgs/stmt10.png);
+}
+
+.stmt__text{
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}
+
+.stmt__text--layout_A{
+	width: 640px;
+	position: absolute;
+	top: 100px;
+	left: 120px;
+}
+
+.stmt__text--layout_B{
+	width: 830px;
+	position: absolute;
+	bottom: 100px;
+	right: 120px;
+}
+
+.stmt__text--layout_C{
+	text-align: center;
+}
+
+.stmt__text--layout_D{
+	margin-right: 40px;
+}
+
+.stmt__text--type_A{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.stmt__text--type_B{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.stmt__text--type_C{
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 0.3em;
+}
+
+.stmt__text--type_D{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.stmt__text--type_E{
+	text-shadow: #000;
+}
+
+.stmt__text--type_F{
+	font-style: italic;
+	text-shadow: #000;
+}
+
+.stmt__text--deco_underline{
+	/* display: inline-block;
+	position: relative;
+  z-index: 1; */
+  background: linear-gradient(transparent 75%, #206a00 0%);
+  display: inline;
+  /*横に余白をつけたり、下にずらしたりするときは以下のpaddingを調整してください*/
+  padding: 0 2px 2px;
+}
+
+.stmt__text--deco_underline::after{
+	/* content: "";
+	display: inline-block;
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	width: 100%;
+	height: 16%;
+	background-color: #206a00;
+	opacity: 0.8;
+	z-index: -1; */
+}
+
+.stmt__text--deco_listdot{
+  display: inline-block;
+  position: relative;
+}
+
+.stmt__text--deco_listdot::after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  left: -12px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: #206a00;
+}
+
+.stmt__reference{
+  width: 300px;
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 32px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.stmt__reference-img{
+  display: flex;
+  align-items: flex-start;
+}
+
+.stmt__reference-img img:nth-child(1){
+  margin-right: 24px;
+}
+
+@media (max-width: 1000px){
+  .stmt{
+    padding: 16px;
+  }
+
+  .stmt--slide_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .stmt__text{
+    font-size: 11px;
+  }
+
+  .stmt__text--type_A{
+    font-size: 13px;
+  }
+  
+  .stmt__text--type_B{
+    font-size: 15px;
+  }
+  
+  .stmt__text--type_C{
+    font-size: 17px;
+    letter-spacing: 0.3em;
+  }
+  
+  .stmt__text--type_D{
+    font-size: 13px;
+  }
+
+  .stmt__text--layout_A,.stmt__text--layout_B{
+    width: 100%;
+    position: static;
+  }
+
+  .stmt__text--layout_A{
+    margin-bottom: 24px;
+  }
+
+  .stmt__text--layout_D{
+    margin: 0;
+  }
+
+  .stmt__reference{
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+  }
+
+  .stmt__reference-img{
+    width: 90%;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  .stmt__reference-img img{
+    width:45%;
+    height: auto;
+  }
+
+  .stmt__reference-img img:nth-child(1){
+    margin-right: 16px;
+  }
+}

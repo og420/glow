@@ -1,16 +1,4 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since 1.0.0
- */
-?><!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -23,9 +11,28 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!-- end -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fullpage.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/animate.min.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/statement.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+<header class="header">
+	<div class="header__logo">
+		<a href="#">
+			<img src="<?php echo get_template_directory_uri();?>/imgs/logo.png">
+		</a>
+	</div>
+	<div class="header__nav">
+		<ul>
+			<li><a href="#">All POSTS</a></li>
+			<li><a href="#">ABOUT US</a></li>
+		</ul>
+	</div>
+</header>
