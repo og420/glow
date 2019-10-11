@@ -25,6 +25,37 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+<div class="globalNav js-globalNav">
+	<div class='header_search_box header_search_box--device_sp'>
+		<?php get_search_form(); ?>
+	</div>
+	<div class="globalNav__categories">
+		<h3>CATEGORIES</h3>
+		<ul>
+			<?php
+			$args = array(
+					'orderby' => 'count',
+					'order' => 'DSC',
+					'parent' => 0
+			);
+			$categories = get_categories( $args );
+
+			foreach( $categories as $category ){
+				echo '<li><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a> </li> ';
+			}
+			?>
+		</ul>
+	</div>
+	<div class="globalNav__categories">
+		<h3>OTHERS</h3>
+		<ul>
+			<li><a href="#" target="_blank">当メディアについて</a>
+			<li><a href="#" target="_blank">ご利用規約</a>
+			<li><a href="#" target="_blank">プライバシーポリシー</a>
+		</ul>
+	</div>
+</div>
+
 <header id='glow_header'>
   <div class='header_left_content'>
     <div class='header_logo'>
@@ -33,11 +64,10 @@
 			</a>
     </div>
     <div class='header_search_box'>
-      <input type='text'>
-      <span>🔍</span>
+			<?php get_search_form(); ?>
     </div>
   </div>
-  <div class='header_burger_menu'>
+  <div class='header_burger_icon js-header__burger__icon'>
     <div></div>
     <div></div>
     <div></div>
