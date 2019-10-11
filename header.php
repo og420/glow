@@ -49,7 +49,7 @@
 	<div class="globalNav__categories">
 		<h3>OTHERS</h3>
 		<ul>
-			<li><a href="#" target="_blank">当メディアについて</a>
+			<li><a href="<?php echo esc_url( home_url('/')); ?>statement" target="_blank">当メディアについて</a>
 			<li><a href="#" target="_blank">ご利用規約</a>
 			<li><a href="#" target="_blank">プライバシーポリシー</a>
 		</ul>

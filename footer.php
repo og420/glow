@@ -25,7 +25,7 @@
 			</div>
 			<div  class="footer__otherLinks">
 				<ul>
-					<li><a href="#" target="_blank">当メディアについて</a>
+					<li><a href="<?php echo esc_url( home_url('/') ); ?>statement" target="_blank">当メディアについて</a>
 					<li><a href="#" target="_blank">ご利用規約</a>
 					<li><a href="#" target="_blank">プライバシーポリシー</a>
 				</ul>
