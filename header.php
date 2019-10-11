@@ -11,10 +11,11 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<!-- end -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fullpage.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/animate.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/statement.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/single.css">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
 	<?php wp_head(); ?>
