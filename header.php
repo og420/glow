@@ -24,16 +24,23 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header class="header">
-	<div class="header__logo">
-		<a href="#">
-			<img src="<?php echo get_template_directory_uri();?>/imgs/logo.png">
-		</a>
-	</div>
-	<div class="header__nav">
-		<ul>
-			<li><a href="#">All POSTS</a></li>
-			<li><a href="#">ABOUT US</a></li>
-		</ul>
-	</div>
+<header id='glow_header'>
+  <div class='header_left_content'>
+    <div class='header_logo'>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<img src="<?php echo get_template_directory_uri();?>/imgs/logo.png">
+			</a>
+    </div>
+    <div class='header_search_box'>
+      <input type='text'>
+      <span>🔍</span>
+    </div>
+  </div>
+  <div class='header_burger_menu'>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </header>
