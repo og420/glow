@@ -44,7 +44,7 @@ html.scroll-prevent {
 .globalNav{
   position: absolute;
   width: 100%;
-  background: rgba(0,10,1,0.9);
+  background: rgba(0,8,1,0.9);
   z-index: 9998;
   display: none;
   -webkit-transition: .35s ease-in-out;
