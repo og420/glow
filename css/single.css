@@ -1,50 +1,204 @@
-.sample-bg{
+/*
+======================================
+single
+======================================
+*/
+
+.s__mv{
   width: 100%;
-  height: 700px;
-  background: url(../imgs/stmt10.png);
-  background-size: cover;
-  background-position: center center;
+  height: 900px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background : #000;
 }
 
-.article__container{
-  margin-top: -440px !important;
+.s__mv__bg{
+  display: block;
+  -ms-filter: blur(6px);
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+  position: absolute;
+  width: 120%;
+  height: auto;
+  opacity: 0.4;
+}
+
+.s__mv__thumb{
+  width: 1280px;
+  height: 600px;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;;
+  background: #000;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+#breadcrumb{
+  position: absolute;
+  top: -32px;
+  left: 0;
+}
+
+#breadcrumb ul li{
+  display: inline-block;
+  color: #fff;
+  list-style: none;
+}
+
+#breadcrumb ul li::after{
+  content: "　>　";
+  color: #fff;
+}
+
+#breadcrumb ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.s__mv__thumb img{
+  width: 120%;
+  height: auto;
+  opacity: 0.7;
+}
+
+.s__mv__title{
+  display: inline-block;
+  position: absolute;
+  font-size: 48px;
+  font-weight: bold;
+  top: -8px;
+  left: -8px;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.s__mv__title--position_bottom{
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+  bottom: -8px;
+  right: -8px;
+}
+
+.s__article__container{
+  position: relative;
+  z-index: 9999;
   background-color: #fff;
   width: 1080px;
   min-height: 2000px;
-  margin: 0 auto;
+  margin: -400px auto 160px auto;
   -webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.24), 0 15px 12px rgba(0,0,0,0.12);
   -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.24), 0 15px 12px rgba(0,0,0,0.12);
   box-shadow: 0 19px 38px rgba(0,0,0,0.24), 0 15px 12px rgba(0,0,0,0.12);
   transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 1000px){
-.article__container{
+.s__article__container{
   -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 }
 
-.article__header{
+.s__article__header{
   border-bottom: 4px solid #206a00;
   padding: 48px 24px 24px 24px;
 }
 
-.article__category{
+.s__article__category{
   display: inline-block;
   padding: 8px 24px;
+  margin-right: 24px;
   background: #206a00;
   text-align: center;
 }
 
-.article__category a{
+.s__article__category a{
   text-decoration: none;
   font-weight: bold;
   color: #fff;
 }
 
-.article__title{
-  font-size: 24px;
+.s__article__date{
+  font-weight: bold;
+}
+
+.s__article__title{
+  font-size: 28px;
   margin-top: 16px;
+}
+
+/*
+======================================
+single 本文
+======================================
+*/
+
+.s__article__content{
+  padding: 56px;
+  line-height: 1.8;
+}
+
+.s__article__content p{
+  margin-bottom: 24px;
+}
+
+.s__article__content h2{
+  margin: 56px 0 40px -56px;
+  display: inline-block;
+  padding: 16px 40px;
+  font-weight: bold;
+  font-size: 24px;
+  background: #206a00;
+  color: #fff;
+}
+
+.s__article__content h3{
+  padding: 8px 16px;
+  border-left: 8px solid #206a00;
+  margin: 40px 0 24px 0;
+}
+
+.s__article__content ul{
+  padding: 16px 32px;
+}
+
+.s__article__content ul li{
+  margin-bottom: 8px;
+  list-style: none;
+  position: relative;
+}
+
+.s__article__content ul li::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: -16px;
+  width: 8px;
+  height: 8px;
+  background: #206a00;
+}
+
+.s__article__content strong{
+  background: linear-gradient(transparent 75%, rgba(32,106,0,0.5) 0%);
+  display: inline;
+  font-weight: bold;
+  padding: 0 2px 2px;
 }

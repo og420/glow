@@ -1,19 +1,13 @@
 @charset "UTF-8";
+/* common */
+.mb10 { margin-bottom: 10px; }
+.mb20 { margin-bottom: 20px; }
+.mb30 { margin-bottom: 30px; }
+.mb40 { margin-bottom: 40px; }
+.mb50 { margin-bottom: 50px; }
 
-/*
-theme Name: GLOW Theme
-Author: OG
-Description: GLOW Original Theme
-version： 1.0.0
-*/
-
-*{
+section h2 {
 	margin: 0;
-	padding: 0;
-}
-
-#glow_header {
-	display: flex;
 }
 
 .clearfix::after {
@@ -22,28 +16,123 @@ version： 1.0.0
 	clear: both;
 }
 
+
+#glow_header {
+	width: calc(100% - 60px);
+	display: flex;
+	position: fixed;
+	z-index: 2;
+	padding: 15px 30px;
+	justify-content: space-between;
+}
+
+.header_left_content {
+	display: flex;
+	align-items: center;
+}
+
+.header_search_box {
+	padding: 5px 15px;
+	border: 1px solid #fff;
+	border-radius: 15px;
+}
+
+.header_search_box input {
+	border: none;
+	background: transparent;
+}
+
+.header_burger_menu {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.header_burger_menu div {
+	width: 80%;
+	border: 1px solid #fff;
+}
+
+.header_burger_menu div:first-child {
+	width: 100%;
+}
+
+/* ---------- main ----------- */
+#main {
+	background: #aaa;
+	position: relative;
+}
+
+.mv_slide div {
+	background: url('http://placehold.jp/1200x600.png');
+	background-size: cover;
+	height: 800px;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+
+.mv_slide_text {
+	text-align: center;
+}
+
+.slick-prev.slick-arrow {
+	left: 5px;
+	z-index: 999;
+}
+
+.slick-next.slick-arrow {
+	right: 5px;
+	z-index: 999;
+}
+
 .dummy_box {
-	width: 180px;
-	height: 240px;
+	width: 240px;
+	height: 360px;
 	background-color: #eee;
-	margin: 0 15px 0 0;
 }
 
 .mv_posts_container {
+	position: sticky;
+	width: 70%;
 	display: flex;
+	justify-content: space-between;
+	padding: 0 0 150px 0;
+	margin: -200px auto 0;
+	z-index: 999;
 }
 
+/* ---------- news ---------- */
 #news {
 	position: relative;
-	/* overflow: hidden; */
-	height: 100vh;
 	display: flex;
+	background: #999;
+}
+
+.news-inner {
+	padding: 50px 0 100px 15%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.news_left_container {
+	width: 56%;
+	position: sticky;
+	z-index: 1;
 }
 
 .news_right_container {
-	position: absolute;
+	margin: 150px 0 0 -200px;
+	position: sticky;
 	right: 0;
-	z-index: -1;
+	z-index: 0;
+}
+
+.news_right_container img {
+	display: block;
 }
 
 .news_posts_container {
@@ -51,4 +140,273 @@ version： 1.0.0
 	display: flex;
 	background-image: url('http://placehold.jp/150x50.png');
 	background-size: contain;
+}
+
+.news_heading {
+	margin: 0 0 100px 0;
+}
+
+.news_main_text {
+	background: #000;
+	color: #fff;
+	padding: 20px 30px;
+}
+
+.news_main_text p {
+	margin: 0;
+	line-height: 1.8;
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 7px;
+}
+
+.news_description {
+	width: 70%;
+	padding: 50px 0 0 0;
+}
+
+.news_description p {
+	line-height: 2;
+	color: #333;
+	font-size: 0.9rem;
+}
+
+.news_read_more {
+	margin: 100px 0 0 0;
+}
+
+.news_read_more p::before {
+	display: inline-block;
+	content: '';
+	background: #000;
+	height: 2px;
+	width: 24rem;
+	margin: 0 2rem 6px 0;
+}
+
+.news_read_more p {
+	font-weight: bold;
+	letter-spacing: 7px;
+}
+
+/* ---------- news posts ---------- */
+#news_posts {
+	background: #888;
+}
+
+.other_posts_inner {
+  padding: 50px 15% 100px;
+}
+
+.other_posts_heading {
+	margin: 0 0 75px 0;
+}
+
+.other_posts_heading img {
+	display: block;
+}
+
+.other_posts_container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.other_post_box {
+	width: 30%;
+	height: 300px;
+	background: #fff;
+}
+
+.other_post_img {
+	display: block;
+	width: 100%;
+}
+
+.other_post_info_box {
+	position: sticky;
+	z-index: 1;
+	width: 75%;
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	margin: -55px 0 0 0;
+}
+
+.other_post_title {
+	line-height: 1.5;
+}
+
+.other_post_datetime {
+	font-size: 0.8rem;
+	color: #ccc;
+}
+
+.other_posts_read_more {
+	margin: 75px 0 0 0;
+}
+
+.other_post_read_more_btn {
+	width: 250px;
+	color: #fff;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 30px;
+	border: 1px solid #fff;
+	padding: 15px 30px;
+}
+
+/* ---------- medical ---------- */
+#medical {
+	background: #777;
+}
+
+.medical-inner {
+	padding: 50px 15% 100px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.medical_left_container {
+	margin: 150px -200px 0 0;
+	position: sticky;
+	left: 0;
+	z-index: 0;
+}
+
+.medical_right_container {
+	width: 56%;
+	position: sticky;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.medical_left_container img {
+	display: block;
+}
+
+.medical_posts_container {
+	width: 100%;
+	display: flex;
+	background-image: url('http://placehold.jp/150x50.png');
+	background-size: contain;
+}
+
+.medical_heading {
+	margin: 0 0 100px 0;
+}
+
+.medical_main_text {
+	background: #000;
+	color: #fff;
+	padding: 20px 30px;
+}
+
+.medical_main_text p {
+	margin: 0;
+	line-height: 1.8;
+	font-size: 32px;
+	font-weight: bold;
+	letter-spacing: 7px;
+}
+
+.medical_description {
+	width: 70%;
+	padding: 50px 0 0 0;
+}
+
+.medical_description p {
+	line-height: 2;
+	color: #333;
+	font-size: 0.9rem;
+}
+
+.medical_read_more {
+	margin: 100px 0 0 0;
+}
+
+.medical_read_more p::before {
+	display: inline-block;
+	content: '';
+	background: #000;
+	height: 2px;
+	width: 24rem;
+	margin: 0 2rem 6px 0;
+}
+
+.medical_read_more p {
+	font-weight: bold;
+	letter-spacing: 7px;
+}
+
+
+/* ---------- medical_post ---------- */
+#medical_post{
+	background: #666;
+}
+
+/* ---------- about_us ---------- */
+#about_us {
+	background: #555;
+	padding: 100px 0 200px;
+}
+
+.about_us-inner{
+	padding: 0 15%;
+}
+
+.about_us_heading {
+	text-align: center;
+	margin: 0 0 150px 0;
+}
+
+.about_us_main_container {
+	color: #fff;
+	border-radius: 75px;
+	padding: 100px;
+	background: url('http://placehold.jp/600x700.png') center/cover no-repeat;
+}
+
+.about_us_main_container h3 {
+	font-size: 2rem;
+  letter-spacing: 2px;
+	font-style: italic;
+}
+
+.about_us_main_container h4 {
+	font-size: 1.8rem;
+	letter-spacing: 2px;
+	font-style: italic;
+}
+
+.about_us_main_container h5 {
+	font-size: 1.2rem;
+}
+
+.about_us_main_container > p {
+	font-size: 0.9rem;
+	margin-bottom: 30px;
+}
+
+.about_us_bottom_content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+
+.about_us_read_more p::before {
+	display: inline-block;
+	content: '';
+	background: #fff;
+	height: 2px;
+	width: 12rem;
+	margin: 0 2rem 6px 0;
+}
+
+.about_us_read_more p {
+	font-size: 0.8rem;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 7px;
 }

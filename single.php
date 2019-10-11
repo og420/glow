@@ -2,64 +2,37 @@
 get_header();
 ?>
 
-<div class="sample-bg"></div>
-
-<div class="article__container">
-  <div class="article__header">
-    <?php if(has_category() ): ?>
-    <span class="article__category">
-      <?php echo get_the_category_list( ' ' ); ?>
-    </span>
-    <?php endif; ?>
-    <span class="article__date">
-      <time
-      datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
-      <?php echo get_the_date(); ?>
-      </time>
-    </span>
-    <h1 class="article__title"><?php the_title(); ?></h1>
+<div class="s__mv">
+  <img class="s__mv__bg" src="<?php the_post_thumbnail_url( 'medium' );?>">
+  <div class="s__mv__thumb">
+    <img src="<?php the_post_thumbnail_url( 'full' );?>">
+    <span class="s__mv__title"><?php the_title(); ?></span>
+    <span class="s__mv__title s__mv__title--position_bottom"><?php the_title(); ?></span>
   </div>
 </div>
 
 <?php if(have_posts()): the_post(); ?>
-<article <?php post_class( 'article-content' ); ?>>
-  <div class="article-info">
-    <!--カテゴリ取得-->
+<article class="s__article__container">
+<?php custom_breadcrumb(); ?>
+  <div class="s__article__header">
     <?php if(has_category() ): ?>
-    <span class="cat-data">
+    <span class="s__article__category">
       <?php echo get_the_category_list( ' ' ); ?>
     </span>
     <?php endif; ?>
-    <!--投稿日を取得-->
-    <span class="article-date">
-      <i class="far fa-clock"></i>
+    <span class="s__article__date">
       <time
       datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
       <?php echo get_the_date(); ?>
       </time>
     </span>
-    <!--著者を取得-->
-    <span class="article-author">
-      <i class="fas fa-user"></i><?php the_author(); ?>
-    </span>
+    <h1 class="s__article__title"><?php the_title(); ?></h1>
   </div>
-  <!--タイトル-->
-  <h1><?php the_title(); ?></h1>
-  <!--アイキャッチ取得-->
-  <div class="article-img">
-    <?php if( has_post_thumbnail() ): ?>
-      <?php the_post_thumbnail( 'large' ); ?>
-    <?php endif; ?>
-  </div>
-  <!--本文取得-->
-  <?php the_content(); ?>
-  <!--タグ-->
-  <div class="article-tag">
-    <?php the_tags('<ul><li>タグ： </li><li>','</li><li>','</li></ul>'
-  ); ?>
+
+  <div class="s__article__content">
+    <?php the_content(); ?>
   </div>
 </article>
 <?php endif; ?>
 
-<?php
-get_footer();
+<?php get_footer(); ?>
