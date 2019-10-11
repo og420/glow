@@ -40,4 +40,8 @@
   </div>
 </section>
 
+<?php
+if( function_exists("the_pagination") ) the_pagination();
+?>
+
 <?php get_footer(); ?>

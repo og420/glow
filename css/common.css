@@ -421,3 +421,56 @@ html.scroll-prevent {
     width: 100%;
   }
 }
+
+/*==========================
+pager
+==========================*/
+
+.pagination {
+  margin: 40px 0;
+  position: relative;
+  font-size: 13px;
+}
+
+.pagination ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination span, .pagination a {
+  display: block;
+  width: auto;
+  margin: 4px;
+  padding: 24px;
+  border: 1px solid #001101;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+  line-height: 16px;
+  font-weight: bold;
+  color: #001101;
+  font-size: 18px;
+}
+
+/* ページ番号 */
+.pagination .pager{
+  width: 32px;
+}
+
+/* ホバー時 & 現在のページ */
+.pagination a:hover,
+.pagination .current  {
+  font-weight: bold;
+  color: #fff;
+  border-color: #206a20;
+  background-color: #001101;
+}
+
+@media(max-width: 1000px){
+  .pagination span, .pagination a {
+    padding: 16px;
+    color: 14px;
+  }
+}
