@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/animate.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/statement.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/single.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/archive.css">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
 	<?php wp_head(); ?>
