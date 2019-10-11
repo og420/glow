@@ -93,7 +93,7 @@ single
 
 .s__article__container{
   position: relative;
-  z-index: 9999;
+  z-index: 9997;
   background-color: #fff;
   width: 1080px;
   min-height: 2000px;

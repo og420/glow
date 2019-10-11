@@ -3,11 +3,11 @@ function load_js() {
 	if ( !is_admin() ){
 		wp_deregister_script( 'jquery' );
     wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), NULL, true );
-    wp_enqueue_script('fullpage1', get_option('site_url').'/wp-content/themes/glow/js/fullPage.min.js', array('jquery'), 'NULL', true);
-    wp_enqueue_script('fullpage2', get_option('site_url').'/wp-content/themes/glow/js/scrolloverflow.min.js', array('jquery'), 'NULL', true);
-    wp_enqueue_script('fullpage3', get_option('site_url').'/wp-content/themes/glow/js/easings.min.js', array('jquery'), 'NULL', true);
-    wp_enqueue_script('wow', get_option('site_url').'/wp-content/themes/glow/js/wow.min.js', array(), 'NULL', true);
-    wp_enqueue_script('siteScript', get_option('site_url').'/wp-content/themes/glow/js/script.js', array('jquery'), 'NULL', true);
+    wp_enqueue_script('fullpage1', get_option('site_url').'/wp-content/themes/glow/js/fullpage.min.js', array('jquery'), NULL, true);
+    wp_enqueue_script('fullpage2', get_option('site_url').'/wp-content/themes/glow/js/scrolloverflow.min.js', array('jquery'), NULL, true);
+    wp_enqueue_script('fullpage3', get_option('site_url').'/wp-content/themes/glow/js/easings.min.js', array('jquery'), NULL, true);
+    wp_enqueue_script('wow', get_option('site_url').'/wp-content/themes/glow/js/wow.min.js', array(), NULL, true);
+    wp_enqueue_script('siteScript', get_option('site_url').'/wp-content/themes/glow/js/script.js', array('jquery'), NULL, true);
 	}
 }
 add_action( 'init', 'load_js' );
@@ -267,6 +267,28 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
     echo '</ul></div>';  // 冒頭に合わせた閉じタグ
 
   }
+}
+
+// ページャー
+
+function the_pagination() {
+  global $wp_query;
+  $bignum = 999999999;
+  if ( $wp_query->max_num_pages <= 1 )
+    return;
+  echo '<nav class="pagination">';
+  echo paginate_links( array(
+    'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
+    'format'       => '',
+    'current'      => max( 1, get_query_var('paged') ),
+    'total'        => $wp_query->max_num_pages,
+    'prev_text'    => '&larr;',
+    'next_text'    => '&rarr;',
+    'type'         => 'list',
+    'end_size'     => 3,
+    'mid_size'     => 3
+  ) );
+  echo '</nav>';
 }
 
 ?>
