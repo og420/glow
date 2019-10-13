@@ -1,3 +1,10 @@
+/*
+Theme Name: GLOW OG THEME
+Description: GLOW OG THEME
+Author : Ken Takahashi
+Version: 1.0
+*/
+
 @charset "UTF-8";
 /* common */
 .mb10 { margin-bottom: 10px; }
@@ -14,50 +21,6 @@ section h2 {
 	content: "";
 	display: block;
 	clear: both;
-}
-
-
-#glow_header {
-	width: calc(100% - 60px);
-	display: flex;
-	position: fixed;
-	z-index: 2;
-	padding: 15px 30px;
-	justify-content: space-between;
-}
-
-.header_left_content {
-	display: flex;
-	align-items: center;
-}
-
-.header_search_box {
-	padding: 5px 15px;
-	border: 1px solid #fff;
-	border-radius: 15px;
-}
-
-.header_search_box input {
-	border: none;
-	background: transparent;
-}
-
-.header_burger_menu {
-	width: 50px;
-	height: 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: flex-end;
-}
-
-.header_burger_menu div {
-	width: 80%;
-	border: 1px solid #fff;
-}
-
-.header_burger_menu div:first-child {
-	width: 100%;
 }
 
 /* ---------- main ----------- */

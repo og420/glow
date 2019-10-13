@@ -1,7 +1,8 @@
-	<footer class="footer">
+<footer class="footer">
+	<div class="container">
 		<p class="footer__quote">
-			大麻合法化の是非について考えることは、
-			あなた自身の幸福について考えることだ。
+			大麻合法化の是非について<br class="sp--hidden">考えることは、<br>
+			あなた自身の幸福について<br class="sp--hidden">考えることだ。
 		</p>
 		<span class="footer__quoteAuthor">GLOW</span>
 
@@ -11,7 +12,8 @@
 					<?php
 					$args = array(
 							'orderby' => 'count',
-							'order' => 'DSC'
+							'order' => 'DSC',
+							'parent' => 0
 					);
 					$categories = get_categories( $args );
 
@@ -23,14 +25,18 @@
 			</div>
 			<div  class="footer__otherLinks">
 				<ul>
-					<li><a href="#" target="_blank">当メディアについて</a>
+					<li><a href="<?php echo esc_url( home_url('/') ); ?>statement" target="_blank">当メディアについて</a>
 					<li><a href="#" target="_blank">ご利用規約</a>
 					<li><a href="#" target="_blank">プライバシーポリシー</a>
 				</ul>
+				<img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png">
 			</div>
 		</div>
-	</footer>
-
+	</div>
+	<p class="footer__copyright">
+		© GLOW All Rights Reserved.
+	</p>
+</footer>
 <?php wp_footer(); ?>
 
 </body>
