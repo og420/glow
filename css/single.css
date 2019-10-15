@@ -200,6 +200,11 @@ single 本文
   margin: 40px 0 24px 0;
 }
 
+.s__article__content img{
+  max-width: 100%;
+  height: auto;
+}
+
 .s__article__content ul{
   padding: 16px 32px;
 }
