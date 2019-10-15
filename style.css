@@ -15,6 +15,9 @@ Version: 1.0
 .mb60 { margin-bottom: 60px !important; }
 .mb70 { margin-bottom: 70px !important; }
 
+a {
+	text-decoration: none;
+}
 
 .black_stroke {
 	color: #f0f0f0;
@@ -259,7 +262,7 @@ section h2 {
 
 .mv_posts_container {
 	position: sticky;
-	width: 70%;
+	width: 1280px;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 0 150px 0;
@@ -275,13 +278,13 @@ section h2 {
 }
 
 .news-inner {
-	padding: 50px 0 100px 15%;
+	padding: 50px 0 100px 11%;
 	display: flex;
 	justify-content: space-between;
 }
 
 .news_left_container {
-	width: 45%;
+	width: 50%;
 	position: sticky;
 	z-index: 1;
 }
@@ -334,6 +337,12 @@ section h2 {
 	line-height: 2;
 	color: #333;
 	font-size: 0.9rem;
+	margin-bottom: 30px;
+}
+
+.news_description p:last-child,
+.medical_description p:last-child {
+	margin-bottom: 0;
 }
 
 .news_read_more {
@@ -361,7 +370,8 @@ section h2 {
 }
 
 .other_posts_inner {
-	padding: 50px 15% 100px;
+	width: 1280px;
+	padding: 50px 11% 100px;
 }
 
 .news_posts_inner {
@@ -384,7 +394,7 @@ section h2 {
 }
 
 .other_post_box {
-	width: 30%;
+	width: 24%;
 	background: transparent;
 }
 
@@ -405,6 +415,11 @@ section h2 {
 
 .other_post_title {
 	line-height: 1.5;
+}
+
+.mv_post_title a,
+.other_post_title a {
+	color: #fff;
 }
 
 .other_post_datetime {
@@ -432,7 +447,7 @@ section h2 {
 }
 
 .medical-inner {
-	padding: 50px 15% 100px 0;
+	padding: 50px 11% 100px 0;
 	display: flex;
 	justify-content: space-between;
 }
@@ -449,7 +464,7 @@ section h2 {
 }
 
 .medical_right_container {
-	width: 45%;
+	width: 50%;
 	position: sticky;
 	z-index: 1;
 	display: flex;
@@ -498,6 +513,7 @@ section h2 {
 	line-height: 2;
 	color: #333;
 	font-size: 0.9rem;
+	margin-bottom: 30px;
 }
 
 .medical_read_more {
