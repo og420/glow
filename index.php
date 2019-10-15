@@ -1,23 +1,73 @@
 <?php
 get_header();
 ?>
+<header id='glow_header'>
+  <div class='header_left_content'>
+    <div class='header_logo'>
+      <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt=''>
+    </div>
+    <div class='header_search_box'>
+      <input type='text'>
+      <span>🔍</span>
+    </div>
+  </div>
+  <div class='header_burger_menu'>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
 <section id='main'>
   <div class='mv_slide'>
-    <div><p class='mv_slide_text'>ホゲホゲ</p></div>
-    <div><p class='mv_slide_text'>ホゲホゲ</p></div>
-    <div><p class='mv_slide_text'>ホゲホゲ</p></div>
+    <?php
+        $arg = array(
+                  'posts_per_page' => 3, // 表示する件数
+                  'orderby' => 'date', // 日付でソート
+                  'order' => 'DESC', // DESCで最新から表示、ASCで最古から表示
+                  'category_name' => 'mv_slide' // 表示したいカテゴリーのスラッグを指定
+              );
+        $posts = get_posts( $arg );
+        if( $posts ): ?>
+        <?php
+            foreach ( $posts as $post ) :
+              setup_postdata( $post ); ?>
+              <div style="background: url(<?php the_post_thumbnail_url('full'); ?>);">
+                <p class='mv_slide_text'><?php the_title(); ?></p>
+              </div>
+      <?php endforeach; ?>
+      <?php
+        endif;
+        wp_reset_postdata();
+      ?>
   </div>
   <div class='mv_posts_container'>
-    <div class='mv_post_box dummy_box'></div>
-    <div class='mv_post_box dummy_box'></div>
-    <div class='mv_post_box dummy_box'></div>
-    <div class='mv_post_box dummy_box'></div>
+    <?php
+      $args = array(
+        'posts_per_page' => 4 // 表示件数の指定
+      );
+      $posts = get_posts( $args );
+      foreach ( $posts as $post ): // ループの開始
+      setup_postdata( $post ); // 記事データの取得
+    ?>
+    <div style="background: url(<?php the_post_thumbnail_url('medium'); ?>);" class='mv_post_box dummy_box'>
+      <div class='mv_post_info'>
+        <?php the_category(); ?>
+        <p class="mv_post_title mb10"><?php the_title(); ?></p>
+        <p class="mv_post_date"><?php the_date(); ?></p>
+      </div>
+    </div>
+    <?php
+      endforeach; // ループの終了
+      wp_reset_postdata(); // 直前のクエリを復元する
+    ?>
   </div>
 </section>
 <section id='news' class='clearfix'>
   <div class='news-inner'>
     <div class='news_left_container'>
-      <div class='news_heading'><img src='http://placehold.jp/300x100.png' alt=''></div>
+      <div class='news_heading'><span class="black_stroke">N</span>EWS</div>
       <div class='news_main_text'>
         <p>2020年大麻合法化。</p>
         <p>今世界で起きているグリーンラッシュと</p>
@@ -27,49 +77,59 @@ get_header();
         <p class='mb30'>そこはほか依然としてその意味痛によってのの以上にするですない。とにかく今日をお話家はもしそのままほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨ</p>
         <p>そこはほか依然としてその意味痛によってのの以上にするですない。とにかく今日をお話家はもしそのままほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨ</p>
       </div>
-      <div class='news_read_more'><p>READ MORE</p></div>
+      <div class='news_read_more'>
+        <p>READ MORE</p>
+      </div>
     </div>
     <div class='news_right_container'>
-      <img src='http://placehold.jp/700x600.png' alt=''>
+      <img src="<?php echo get_template_directory_uri(); ?>/imgs/weed-politics.png" alt=''>
     </div>
   </div>
 </section>
 <section id='news_posts'>
-  <div class='other_posts_inner'>
-    <h2 class='other_posts_heading'><img src='http://placehold.jp/300x100.png' alt=''></h2>
+  <div class='other_posts_inner news_posts_inner'>
+    <h2 class='other_posts_heading'>
+      <span class="white_stroke">O</span>THER POSTS
+    </h2>
     <div class='other_posts_container'>
-      <div class='other_post_box'>
-        <img src='http://placehold.jp/400x300.png' alt='' class='other_post_img'>
-        <div class='other_post_info_box'>
-          <div class='other_post_title mb10'>大麻によって税収アップ？アメリカ・カナダの事例を紹介</div>
-          <div class='other_post_datetime'>2019.01.01 04:20:08</div>
-        </div>
-      </div>
-      <div class='other_post_box'>
-        <img src='http://placehold.jp/400x300.png' alt='' class='other_post_img'>
-        <div class='other_post_info_box'>
-          <div class='other_post_title mb10'>大麻によって税収アップ？アメリカ・カナダの事例を紹介</div>
-          <div class='other_post_datetime'>2019.01.01 04:20:08</div>
-        </div>
-      </div>
-      <div class='other_post_box'>
-        <img src='http://placehold.jp/400x300.png' alt='' class='other_post_img'>
-        <div class='other_post_info_box'>
-          <div class='other_post_title mb10'>大麻によって税収アップ？アメリカ・カナダの事例を紹介</div>
-          <div class='other_post_datetime'>2019.01.01 04:20:08</div>
-        </div>
-      </div>
+      <?php
+        $arg = array(
+                  'posts_per_page' => 3, // 表示する件数
+                  'orderby' => 'date', // 日付でソート
+                  'order' => 'DESC', // DESCで最新から表示、ASCで最古から表示
+                  'category_name' => 'news' // 表示したいカテゴリーのスラッグを指定
+              );
+        $posts = get_posts( $arg );
+        if( $posts ): ?>
+        <?php
+            foreach ( $posts as $post ) :
+              setup_postdata( $post ); ?>
+            <div class='other_post_box'>
+              <img src="<?php the_post_thumbnail_url('medium'); ?>" alt='' class='other_post_img'>
+              <div class='other_post_info_box'>
+                <?php the_category(); ?>
+                <div class='other_post_title mb10'><?php the_title(); ?></div>
+                <div class='other_post_datetime'><?php the_date(); ?></div>
+              </div>
+            </div>
+      <?php endforeach; ?>
+      <?php
+        endif;
+        wp_reset_postdata();
+      ?>
     </div>
-    <div class='other_posts_read_more'><div class='other_post_read_more_btn'>「栽培の記事をもっと見る」</div></div>
+    <div class='other_posts_read_more'>
+      <div class='other_post_read_more_btn'>「栽培の記事をもっと見る」</div>
+    </div>
   </div>
 </section>
 <section id='medical'>
   <div class='medical-inner'>
     <div class='medical_left_container'>
-      <img src='http://placehold.jp/700x600.png' alt=''>
+      <img src="<?php echo get_template_directory_uri(); ?>/imgs/medical-weed.png" alt=''>
     </div>
     <div class='medical_right_container'>
-      <div class='medical_heading'><img src='http://placehold.jp/300x100.png' alt=''></div>
+      <div class='medical_heading'><span class="black_stroke">M</span>EDICAL</div>
       <div class='medical_main_text'>
         <p>2020年大麻合法化。</p>
         <p>今世界で起きているグリーンラッシュと</p>
@@ -79,53 +139,67 @@ get_header();
         <p class='mb30'>そこはほか依然としてその意味痛によってのの以上にするですない。とにかく今日をお話家はもしそのままほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨ</p>
         <p>そこはほか依然としてその意味痛によってのの以上にするですない。とにかく今日をお話家はもしそのままほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨほげほげポヨポヨ</p>
       </div>
-      <div class='medical_read_more'><p>READ MORE</p></div>
+      <div class='medical_read_more'>
+        <p>READ MORE</p>
+      </div>
     </div>
   </div>
 </section>
 <section id='medical_post'>
-  <div class='other_posts_inner'>
-    <h2 class='other_posts_heading'><img src='http://placehold.jp/300x100.png' alt=''></h2>
+  <div class='other_posts_inner medical_posts_inner'>
+    <h2 class='other_posts_heading'>
+      <span class="white_stroke">O</span>THER POSTS
+    </h2>
     <div class='other_posts_container'>
-      <div class='other_post_box'>
-        <img src='http://placehold.jp/400x300.png' alt='' class='other_post_img'>
-        <div class='other_post_info_box'>
-          <div class='other_post_title mb10'>大麻によって税収アップ？アメリカ・カナダの事例を紹介</div>
-          <div class='other_post_datetime'>2019.01.01 04:20:08</div>
-        </div>
-      </div>
-      <div class='other_post_box'>
-        <img src='http://placehold.jp/400x300.png' alt='' class='other_post_img'>
-        <div class='other_post_info_box'>
-          <div class='other_post_title mb10'>大麻によって税収アップ？アメリカ・カナダの事例を紹介</div>
-          <div class='other_post_datetime'>2019.01.01 04:20:08</div>
-        </div>
-      </div>
-      <div class='other_post_box'>
-        <img src='http://placehold.jp/400x300.png' alt='' class='other_post_img'>
-        <div class='other_post_info_box'>
-          <div class='other_post_title mb10'>大麻によって税収アップ？アメリカ・カナダの事例を紹介</div>
-          <div class='other_post_datetime'>2019.01.01 04:20:08</div>
-        </div>
-      </div>
+      <?php
+        $arg = array(
+                  'posts_per_page' => 3, // 表示する件数
+                  'orderby' => 'date', // 日付でソート
+                  'order' => 'DESC', // DESCで最新から表示、ASCで最古から表示
+                  'category_name' => 'medical' // 表示したいカテゴリーのスラッグを指定
+              );
+        $posts = get_posts( $arg );
+        if( $posts ): ?>
+        <?php
+            foreach ( $posts as $post ) :
+              setup_postdata( $post ); ?>
+            <div class='other_post_box'>
+              <img src="<?php the_post_thumbnail_url('medium'); ?>" alt='' class='other_post_img'>
+              <div class='other_post_info_box'>
+                <?php the_category(); ?>
+                <div class='other_post_title mb10'><?php the_title(); ?></div>
+                <div class='other_post_datetime'><?php the_date(); ?></div>
+              </div>
+            </div>
+      <?php endforeach; ?>
+      <?php
+        endif;
+        wp_reset_postdata();
+      ?>
     </div>
-    <div class='other_posts_read_more'><div class='other_post_read_more_btn'>「栽培の記事をもっと見る」</div></div>
+    <div class='other_posts_read_more'>
+      <div class='other_post_read_more_btn'>「栽培の記事をもっと見る」</div>
+    </div>
   </div>
 </section>
 <section id='about_us'>
   <div class='about_us-inner'>
-    <h2 class='about_us_heading'><img src='http://placehold.jp/300x100.png' alt=''></h2>
+    <h2 class='about_us_heading'>
+      <span class="white_stroke">A</span>BOUT US
+    </h2>
     <div class='about_us_main_container'>
       <h3>大麻合法化の是非について考えることは、<br>あなた自身の幸福について考えることだ</h3>
-      <h5>誤解を恐れずに問いたい…この国に住む私たちは、今とても不幸なんじゃないか？</h5>
+      <h5 class="mb30">誤解を恐れずに問いたい…この国に住む私たちは、今とても不幸なんじゃないか？</h5>
       <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <p class='mb50'>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <h4>だからこそ我々『GreenTimes』は<br>この国の民主主義を再機能させたい</h4>
+      <p class='mb70'>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      <h4 class='mb30'>だからこそ我々『GreenTimes』は<br>この国の民主主義を再機能させたい</h4>
       <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
       <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
       <div class='about_us_bottom_content'>
-        <img src='http://placehold.jp/300x50.png' alt=''>
-        <div class='about_us_read_more'><p>READ MORE</p></div>
+        <img src="<?php echo get_template_directory_uri(); ?>/imgs/logo.png" alt=''>
+        <div class='about_us_read_more'>
+          <p>READ MORE</p>
+        </div>
       </div>
     </div>
   </div>

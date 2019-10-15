@@ -3,6 +3,7 @@ function load_js() {
 	if ( !is_admin() ){
 		wp_deregister_script( 'jquery' );
     wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), NULL, true );
+    wp_enqueue_script('slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), NULL, true);
     wp_enqueue_script('fullpage1', get_option('site_url').'/wp-content/themes/glow/js/fullpage.min.js', array('jquery'), NULL, true);
     wp_enqueue_script('fullpage2', get_option('site_url').'/wp-content/themes/glow/js/scrolloverflow.min.js', array('jquery'), NULL, true);
     wp_enqueue_script('fullpage3', get_option('site_url').'/wp-content/themes/glow/js/easings.min.js', array('jquery'), NULL, true);
@@ -11,6 +12,9 @@ function load_js() {
 	}
 }
 add_action( 'init', 'load_js' );
+
+// thumbnail用
+add_theme_support( 'post-thumbnails' );
 
 // bread-crumb生成用
 
