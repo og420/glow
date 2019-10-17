@@ -15,6 +15,16 @@ Version: 1.0
 .mb60 { margin-bottom: 60px !important; }
 .mb70 { margin-bottom: 70px !important; }
 
+@media (max-width:1000px){
+.mb10 { margin-bottom: 4px !important; }
+.mb20 { margin-bottom: 8px !important; }
+.mb30 { margin-bottom: 16px !important; }
+.mb40 { margin-bottom: 24px !important; }
+.mb50 { margin-bottom: 32px !important; }
+.mb60 { margin-bottom: 40px !important; }
+.mb70 { margin-bottom: 48px !important; }
+}
+
 a {
 	text-decoration: none;
 }
@@ -129,7 +139,7 @@ section h2 {
 	width: 100%;
 	height: 100%;
 	background: #000;
-	opacity: 0.85;
+	opacity: 0.75;
 	z-index: -1;
 }
 
@@ -207,7 +217,7 @@ section h2 {
 	justify-content: flex-end;
 	position: relative;
 	z-index: 1;
-	width: 256px;
+	width: 296px;
 	height: 360px;
 	background-color: #eee;
 }
@@ -223,6 +233,10 @@ section h2 {
 	z-index: -1;
 }
 
+.mv_post_box--fix_space{
+	display: none;
+}
+
 .mv_post_info {
 	padding: 16px;
 }
@@ -230,7 +244,7 @@ section h2 {
 .post-categories {
 	list-style: none;
 	display: flex;
-	margin-bottom: 15px;
+	margin-bottom: 16px;
 }
 
 .post-categories li {
@@ -265,9 +279,69 @@ section h2 {
 	width: 1280px;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	padding: 0 0 150px 0;
 	margin: -96px auto 0;
 	z-index: 999;
+}
+
+@media(max-width: 1000px){
+
+	.slick-arrow{
+		width: 12px;
+	}
+
+	.slick-prev:before, .slick-next:before{
+		font-size: 12px;
+	}
+
+	.mv_slide_bg{
+		height: 520px;
+	}
+
+	.mv_slide_bg img{
+		width: auto;
+		height: 100%;
+	}
+
+	.mv_slide_welcomeMessage{
+		margin: 120px auto 40px auto;
+		font-size: 12px;
+		letter-spacing: 4px;
+	}
+
+	.mv_slide_text{
+		font-size: 20px;
+		margin-bottom: 32px;
+	}
+
+	.mv_slide_readMore div{
+		height: 24px;
+		margin-bottom: 20px;
+	}
+
+	.mv_slide_readMore a{
+		font-size: 12px;
+		letter-spacing: 4px;
+	}
+
+	.mv_posts_container{
+		width: 100%;
+		justify-content: center;
+		margin-top: -80px;
+		padding-bottom: 40px;
+	}
+
+	.mv_post_box{
+		width: 44%;
+		height: 264px;
+		margin-bottom: 16px;
+	}
+
+	.mv_post_box:nth-child(1),
+	.mv_post_box:nth-child(3){
+		margin-right: 4%;
+	}
 }
 
 /* ---------- news ---------- */
@@ -329,7 +403,7 @@ section h2 {
 }
 
 .news_description {
-	width: 70%;
+	width: 75%;
 	padding: 50px 0 0 0;
 }
 
@@ -347,40 +421,52 @@ section h2 {
 
 .news_read_more {
 	margin: 100px 0 0 0;
+	width: 80%;
 }
 
-.news_read_more p::before {
+.news_read_more a::before {
 	display: inline-block;
 	content: '';
 	background: #000;
 	height: 2px;
-	width: 24rem;
+	width: 20rem;
 	margin: 0 2rem 6px 0;
 }
 
-.news_read_more p {
+.news_read_more a {
 	font-weight: bold;
 	letter-spacing: 7px;
+	color: #000;
 }
 
 /* ---------- news posts ---------- */
 #news_posts {
 	background-image: url(./imgs/Weed-Inc.png);
 	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+
+#news_posts::before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 100, 0, 0.4);
 }
 
 .other_posts_inner {
 	width: 1280px;
-	padding: 50px 11% 100px;
-}
-
-.news_posts_inner {
-	background: rgba(0, 100, 0, 0.4);
+	padding: 50px 0 100px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
 }
 
 .other_posts_heading {
 	display: inline-block;
-	margin: 0 0 75px 0;
+	margin: 0 0 48px 0;
 	color: #fff;
 	font-size: 1.7rem;
 	padding-bottom: 7px;
@@ -390,24 +476,47 @@ section h2 {
 
 .other_posts_container {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
 .other_post_box {
 	width: 24%;
 	background: transparent;
+	position: relative;
 }
 
 .other_post_img {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
+	height: 224px;
+	overflow: hidden;
+	background: rgba(25,47,4,0.9);
+}
+
+.other_post_img img{
+	width: 120%;
+	height: auto;
+}
+
+.other_post_category{
+  display: inline-block;
+  position: absolute;
+  background: #206a00;
+  padding: 8px 16px;
+  left: 0;
+  top: 0;
+	color: #fff;
+	font-size: 12px;
 }
 
 .other_post_info_box {
 	position: sticky;
 	z-index: 1;
-	width: 75%;
-	padding: 10px;
+	width: 85%;
+	padding: 12px;
 	background: #000;
 	color: #fff;
 	margin: -55px 0 0 0;
@@ -432,18 +541,20 @@ section h2 {
 }
 
 .other_post_read_more_btn {
-	width: 250px;
+	width: 320px;
 	color: #fff;
 	text-align: center;
 	margin: 0 auto;
 	border-radius: 30px;
 	border: 1px solid #fff;
 	padding: 15px 30px;
+	display: block;
 }
 
 /* ---------- medical ---------- */
 #medical {
 	background: #f0f0f0;
+	overflow: hidden;
 }
 
 .medical-inner {
@@ -505,7 +616,7 @@ section h2 {
 }
 
 .medical_description {
-	width: 70%;
+	width: 75%;
 	padding: 50px 0 0 0;
 }
 
@@ -518,20 +629,22 @@ section h2 {
 
 .medical_read_more {
 	margin: 100px 0 0 0;
+	padding-left: 20%;
 }
 
-.medical_read_more p::before {
+.medical_read_more a::before {
 	display: inline-block;
 	content: '';
 	background: #000;
 	height: 2px;
-	width: 24rem;
+	width: 20rem;
 	margin: 0 2rem 6px 0;
 }
 
-.medical_read_more p {
+.medical_read_more a {
 	font-weight: bold;
 	letter-spacing: 7px;
+	color: #000;
 }
 
 
@@ -539,17 +652,106 @@ section h2 {
 #medical_post{
 	background-image: url(./imgs/Weed-Inc.png);
 	background-size: cover;
+	position: relative;
 }
 
-.medical_posts_inner {
+#medical_post::before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
 	background: rgba(120, 120, 120, 0.5);
+}
+
+@media(max-width: 1000px){
+
+	.news_right_container, .medical_left_container{
+		width: 100%;
+		position: absolute;
+		margin-top: 80px;
+	}
+
+	.news_left_container, .medical_right_container{
+		width: 100%;
+		display: block;
+	}
+
+	.news_right_container img, .medical_left_container img{
+		width: 120%;
+	}
+
+	.news_heading, .medical_heading{
+		font-size: 3rem;
+		margin-bottom: 224px;
+		text-align: center;
+	}
+
+	.news-inner, .medical-inner{
+		width: 100%;
+		padding: 32px 0 48px 0;
+	}
+
+	.news_main_text, .medical_main_text{
+		padding: 16px;
+		margin: 0 auto;
+		width: 84%;
+		display: block;
+	}
+
+	.news_description, .medical_description{
+		width: 100%;
+		box-sizing: border-box;
+		padding: 16px;
+		display: none;
+	}
+
+	.news_read_more a::before,
+	.medical_read_more a::before{
+		width: 6rem;
+	}
+
+	.news_read_more,
+	.medical_read_more{
+		padding-left: 18%;
+		margin-top: 40px;
+	}
+
+	.other_posts_container{
+		justify-content: center;
+	}
+
+	.other_posts_inner{
+		width: 100%;
+	}
+
+	.other_posts_heading{
+		display: block;
+		text-align: center;
+	}
+
+	.other_post_box{
+		width: 92%;
+		margin-bottom: 20px;
+	}
+
+	.other_posts_read_more{
+		margin-top: 40px;
+	}
+
+	.other_post_read_more_btn{
+		width: 80%;
+		padding: 15px 15px;
+	}
 }
 
 /* ---------- about_us ---------- */
 #about_us {
+	width: 100%;
 	padding: 100px 0 200px;
-	background-color: rgba(15, 90, 0, 0.61);
+	background-color: rgba(23, 35, 12, 0.6);
 	position: relative;
+	overflow: hidden;
 }
 
 #about_us::before {
@@ -573,7 +775,7 @@ section h2 {
 
 .about_us_heading {
 	text-align: center;
-	margin: 0 0 120px 0;
+	margin: 0 0 80px 0;
 	color: #fff;
 	font-size: 4rem;
 }
@@ -587,6 +789,7 @@ section h2 {
 	background: url('./imgs/weed-demo.png');
 	background-size: 240%;
 	background-position: -720px -300px;
+	line-height: 1.4;
 }
 
 .about_us_main_container::before {
@@ -596,7 +799,7 @@ section h2 {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: rgba(15, 90, 0, 0.315);
+	background-color: rgba(25, 47, 4, 0.6);
 	border-radius: 75px;
 	z-index: -1;
 }
@@ -626,11 +829,13 @@ section h2 {
 
 .about_us_bottom_content {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	margin-top: 100px;
 }
 
-.about_us_read_more p::before {
+.about_us_read_more a::before {
 	display: inline-block;
 	content: '';
 	background: #fff;
@@ -639,9 +844,69 @@ section h2 {
 	margin: 0 2rem 6px 0;
 }
 
-.about_us_read_more p {
+.about_us_read_more a {
+	display: block;
 	font-size: 0.8rem;
 	color: #fff;
 	font-weight: bold;
 	letter-spacing: 7px;
+}
+
+@media (max-width:1000px){
+
+	#about_us{
+		padding: 80px 0;
+	}
+	.about_us-inner{
+		padding: 24px;
+	}
+	.about_us_main_container{
+		padding: 40px 16px;
+		border-radius: 24px;	;
+		-webkit-border-radius: 24px	;
+		-moz-border-radius: 24px	;
+		-ms-border-radius: 24px	;
+		-o-border-radius: 24px	;
+	}
+
+	.about_us_main_container::before{
+		border-radius: 24px;	;
+		-webkit-border-radius: 24px	;
+		-moz-border-radius: 24px	;
+		-ms-border-radius: 24px	;
+		-o-border-radius: 24px	;
+}
+
+	.about_us_heading{
+		font-size: 3rem;
+	}
+
+	.about_us_main_container h3{
+		font-size: 1.6rem;
+		margin-bottom: 32px;
+	}
+
+	.about_us_main_container h4,
+	.about_us_main_container h5{
+		font-size: 1.3rem;
+		font-style: italic;
+	}
+
+	.about_us_main_container > p{
+		margin-bottom: 20px;
+	}
+
+	.about_us_bottom_content{
+		justify-content: center;
+		margin-top: 40px;
+	}
+
+	.about_us_bottom_content img {
+		margin-bottom: 24px;
+		width: 60%;
+	}
+
+	.about_us_read_more a::before{
+		width: 6rem;
+	}
 }
