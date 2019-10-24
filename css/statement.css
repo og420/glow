@@ -180,6 +180,18 @@ statement
   margin-right: 24px;
 }
 
+.stmt__reference span{
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.stmt__referenceAuthor{
+  color: #fff;
+  text-decoration: underline;
+}
+
 @media(max-width:1500px){
   .stmt__text{
     font-size: 14px;
@@ -249,6 +261,12 @@ statement
     width: 100%;
     margin-top: 24px;
     padding: 12px;
+    font-size: 11px;
+  }
+
+  .stmt__reference span{
+    font-size: 14px;
+    margin-bottom: 8px;
   }
 
   .stmt__reference-img{
