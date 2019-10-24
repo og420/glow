@@ -26,7 +26,8 @@ Template Name: statement
     <p class="stmt__text stmt__text--layout_B wow fadeIn" data-wow-delay="4s">
       <span class="stmt__text--type_A">
       「仕方ない…これが現実だ。」<br>
-      自分に言い聞かせる。いつしか、おかしいとさえ感じなくなってしまった。
+      自分に言い聞かせる。<br>
+      いつしか、おかしいとさえ感じなくなってしまった。
       </span><br><br>
 
       そんな現実たちから逃れるために今日も、家に帰ってはYouTubeを開く、Netflixを開く。<br>

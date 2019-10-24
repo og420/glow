@@ -180,6 +180,25 @@ statement
   margin-right: 24px;
 }
 
+@media(max-width:1500px){
+  .stmt__text{
+    font-size: 14px;
+  }
+
+  .stmt__text--type_A{
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .stmt__text--type_B{
+    font-size: 24px;
+  }
+
+  .stmt__text--layout_B{
+    width: 721px;
+  }
+}
+
 @media (max-width: 1000px){
   .stmt{
     padding: 16px;
