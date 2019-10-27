@@ -180,6 +180,10 @@ single 本文
   line-height: 1.8;
 }
 
+.s__article__content iframe{
+  max-width: 100%;
+}
+
 .s__article__content p{
   margin-bottom: 24px;
 }
