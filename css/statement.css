@@ -180,6 +180,37 @@ statement
   margin-right: 24px;
 }
 
+.stmt__reference span{
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.stmt__referenceAuthor{
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media(max-width:1500px){
+  .stmt__text{
+    font-size: 14px;
+  }
+
+  .stmt__text--type_A{
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .stmt__text--type_B{
+    font-size: 24px;
+  }
+
+  .stmt__text--layout_B{
+    width: 721px;
+  }
+}
+
 @media (max-width: 1000px){
   .stmt{
     padding: 16px;
@@ -230,6 +261,12 @@ statement
     width: 100%;
     margin-top: 24px;
     padding: 12px;
+    font-size: 11px;
+  }
+
+  .stmt__reference span{
+    font-size: 14px;
+    margin-bottom: 8px;
   }
 
   .stmt__reference-img{

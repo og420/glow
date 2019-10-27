@@ -155,6 +155,13 @@ html.scroll-prevent {
 .header_search_box input {
 	border: none;
   background: transparent;
+  cursor: pointer;
+  caret-color: #35f035;
+
+}
+
+.header_search_box input[type="text"]:focus {
+  outline: 0;
 }
 
 .header_burger_icon {
