@@ -1,7 +1,3 @@
-// wow
-
-new WOW().init();
-
 // $開放
 
 jQuery(function($){
@@ -51,4 +47,37 @@ $('.js-header__burger__icon').click(function() {
   }
 });
 
+// 記事出現アニメーションのタイミング制御
+
+$(function(){
+  $('.other_post_box').each(function(){
+    $(this).attr('class','wow fadeIn other_post_box');
+  });
+  $('.mv_post_box').each(function(){
+    $(this).attr('class','wow fadeIn mv_post_box');
+  });
+  $('.a__article').each(function(){
+    $(this).attr('class','wow fadeIn a__article');
+  });
+  $('.js-pcA_posts .other_post_box').each(function(i){
+      $(this).attr('data-wow-delay',(0.4 + i * 0.4)+'s');
+  });
+  $('.js-pcB_posts .other_post_box').each(function(i){
+    $(this).attr('data-wow-delay',(0.4 + i * 0.4)+'s');
+  });
+  $('.js-pcC_posts .other_post_box').each(function(i){
+    $(this).attr('data-wow-delay',(0.4 + i * 0.4)+'s');
+  });
+  $('.mv_post_box').each(function(i){
+    $(this).attr('data-wow-delay',(0.4 + i * 0.4)+'s');
+  });
+  $('.a__article').each(function(i){
+    $(this).attr('data-wow-delay',(0.4 + i * 0.4)+'s');
+  });
 });
+
+});
+
+// wow
+
+new WOW().init();

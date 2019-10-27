@@ -70,8 +70,8 @@ get_header();
       ?>
   </div>
 </section>
-<section id='news' class='clearfix'>
-  <div class='news-inner'>
+<section id='pcA' class='clearfix'>
+  <div class='pcA-inner'>
     <?php
       $arg = array(
                 'posts_per_page' => 1, // 表示する件数
@@ -82,19 +82,19 @@ get_header();
       $posts = get_posts( $arg );
       if( $posts ): ?>
         <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-          <div class='news_left_container'>
-            <div class='news_heading'><span class="black_stroke">P</span>OLITICS</div>
-            <div class='news_main_text'>
+          <div class='pcA_left_container'>
+            <div class='pcA_heading'><span class="black_stroke">P</span>OLITICS</div>
+            <div class='pcA_main_text'>
               <p><?php the_title(); ?></p>
             </div>
-            <div class='news_description'>
+            <div class='pcA_description'>
               <p><?php the_excerpt(); ?></p>
             </div>
-            <div class='news_read_more'>
+            <div class='pcA_read_more'>
               <a href="<?php the_permalink(); ?>">READ MORE</p>
             </div>
           </div>
-          <div class='news_right_container'>
+          <div class='pcA_right_container'>
             <img src="<?php the_post_thumbnail_url('large'); ?>" alt=''>
           </div>
       <?php endforeach; ?>
@@ -102,8 +102,8 @@ get_header();
     wp_reset_postdata(); ?>
   </div>
 </section>
-<section id='news_posts'>
-  <div class='other_posts_inner news_posts_inner'>
+<section id='pcA_posts' class="js-pcA_posts">
+  <div class='other_posts_inner pcA_posts_inner'>
     <h2 class='other_posts_heading'>
       <span class="white_stroke">O</span>THER POSTS
     </h2>
@@ -152,8 +152,8 @@ get_header();
     </div>
   </div>
 </section>
-<section id='medical'>
-  <div class='medical-inner'>
+<section id='pcB'>
+  <div class='pcB-inner'>
     <?php
       $arg = array(
                 'posts_per_page' => 1, // 表示する件数
@@ -164,18 +164,18 @@ get_header();
       $posts = get_posts( $arg );
       if( $posts ): ?>
         <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-          <div class='medical_left_container'>
+          <div class='pcB_left_container'>
             <img src="<?php the_post_thumbnail_url('large'); ?>" alt=''>
           </div>
-          <div class='medical_right_container'>
-            <div class='medical_heading'><span class="black_stroke">M</span>EDICAL</div>
-            <div class='medical_main_text'>
+          <div class='pcB_right_container'>
+            <div class='pcB_heading'><span class="black_stroke">M</span>EDICAL</div>
+            <div class='pcB_main_text'>
               <p><?php the_title(); ?></p>
             </div>
-            <div class='medical_description'>
+            <div class='pcB_description'>
               <p><?php the_excerpt(); ?></p>
             </div>
-            <div class='medical_read_more'>
+            <div class='pcB_read_more'>
               <a href="<?php the_permalink(); ?>">READ MORE</p>
             </div>
           </div>
@@ -184,8 +184,8 @@ get_header();
     wp_reset_postdata(); ?>
   </div>
 </section>
-<section id='medical_post'>
-  <div class='other_posts_inner medical_posts_inner'>
+<section id='pcB_posts' class="js-pcB_posts">
+  <div class='other_posts_inner pcB_posts_inner'>
     <h2 class='other_posts_heading'>
       <span class="white_stroke">O</span>THER POSTS
     </h2>
@@ -234,8 +234,8 @@ get_header();
     </div>
   </div>
 </section>
-<section id='news' class='clearfix'>
-  <div class='news-inner'>
+<section id='pcA' class='clearfix'>
+  <div class='pcA-inner'>
     <?php
       $arg = array(
                 'posts_per_page' => 1, // 表示する件数
@@ -246,19 +246,19 @@ get_header();
       $posts = get_posts( $arg );
       if( $posts ): ?>
         <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-          <div class='news_left_container'>
-            <div class='news_heading'><span class="black_stroke">B</span>USINESS</div>
-            <div class='news_main_text'>
+          <div class='pcA_left_container'>
+            <div class='pcA_heading'><span class="black_stroke">B</span>USINESS</div>
+            <div class='pcA_main_text'>
               <p><?php the_title(); ?></p>
             </div>
-            <div class='news_description'>
+            <div class='pcA_description'>
               <p><?php the_excerpt(); ?></p>
             </div>
-            <div class='news_read_more'>
+            <div class='pcA_read_more'>
               <a href="<?php the_permalink(); ?>">READ MORE</p>
             </div>
           </div>
-          <div class='news_right_container'>
+          <div class='pcA_right_container'>
             <img src="<?php the_post_thumbnail_url('large'); ?>" alt=''>
           </div>
       <?php endforeach; ?>
@@ -266,8 +266,8 @@ get_header();
     wp_reset_postdata(); ?>
   </div>
 </section>
-<section id='news_posts'>
-  <div class='other_posts_inner news_posts_inner'>
+<section id='pcA_posts' class="js-pcC_posts">
+  <div class='other_posts_inner pcA_posts_inner'>
     <h2 class='other_posts_heading'>
       <span class="white_stroke">O</span>THER POSTS
     </h2>

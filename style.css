@@ -344,26 +344,26 @@ section h2 {
 	}
 }
 
-/* ---------- news ---------- */
-#news {
+/* ---------- POST CATEGORIE A ---------- */
+#pcA {
 	position: relative;
 	display: flex;
 	background: #f0f0f0;
 }
 
-.news-inner {
+.pcA-inner {
 	padding: 50px 0 100px 11%;
 	display: flex;
 	justify-content: space-between;
 }
 
-.news_left_container {
+.pcA_left_container {
 	width: 50%;
 	position: sticky;
 	z-index: 1;
 }
 
-.news_right_container {
+.pcA_right_container {
 	margin: 150px 0 0 -200px;
 	position: sticky;
 	right: 0;
@@ -371,31 +371,31 @@ section h2 {
 	overflow: hidden;
 }
 
-.news_right_container img {
+.pcA_right_container img {
 	display: block;
 	width: 800px;
 }
 
-.news_posts_container {
+.pcA_posts_container {
 	width: 100%;
 	display: flex;
 	background-image: url('http://placehold.jp/150x50.png');
 	background-size: contain;
 }
 
-.news_heading {
+.pcA_heading {
 	margin: 0 0 100px 0;
 	font-size: 5rem;
 	font-weight: bold;
 }
 
-.news_main_text {
+.pcA_main_text {
 	background: #000;
 	color: #fff;
 	padding: 20px 30px;
 }
 
-.news_main_text p {
+.pcA_main_text p {
 	margin: 0;
 	line-height: 1.8;
 	font-size: 1.5rem;
@@ -403,29 +403,29 @@ section h2 {
 	letter-spacing: 5px;
 }
 
-.news_description {
+.pcA_description {
 	width: 75%;
 	padding: 50px 0 0 0;
 }
 
-.news_description p {
+.pcA_description p {
 	line-height: 2;
 	color: #333;
 	font-size: 0.9rem;
 	margin-bottom: 30px;
 }
 
-.news_description p:last-child,
-.medical_description p:last-child {
+.pcA_description p:last-child,
+.pcB_description p:last-child {
 	margin-bottom: 0;
 }
 
-.news_read_more {
+.pcA_read_more {
 	margin: 100px 0 0 0;
 	width: 80%;
 }
 
-.news_read_more a::before {
+.pcA_read_more a::before {
 	display: inline-block;
 	content: '';
 	background: #000;
@@ -434,21 +434,21 @@ section h2 {
 	margin: 0 2rem 6px 0;
 }
 
-.news_read_more a {
+.pcA_read_more a {
 	font-weight: bold;
 	letter-spacing: 7px;
 	color: #000;
 }
 
-/* ---------- news posts ---------- */
-#news_posts {
+/* ---------- POST CATEGORIE A ---------- */
+#pcA_posts {
 	background-image: url(./imgs/Weed-Inc.png);
 	background-size: cover;
 	overflow: hidden;
 	position: relative;
 }
 
-#news_posts::before{
+#pcA_posts::before{
 	content: "";
 	position: absolute;
 	display: block;
@@ -552,19 +552,19 @@ section h2 {
 	display: block;
 }
 
-/* ---------- medical ---------- */
-#medical {
+/* ---------- POST CATEGORIES B ---------- */
+#pcB {
 	background: #f0f0f0;
 	overflow: hidden;
 }
 
-.medical-inner {
+.pcB-inner {
 	padding: 50px 11% 100px 0;
 	display: flex;
 	justify-content: space-between;
 }
 
-.medical_left_container {
+.pcB_left_container {
 	margin: 150px -200px 0 0;
 	position: sticky;
 	left: 0;
@@ -572,11 +572,11 @@ section h2 {
 	overflow: hidden;
 }
 
-.medical_left_container img {
+.pcB_left_container img {
 	width: 800px;
 }
 
-.medical_right_container {
+.pcB_right_container {
 	width: 50%;
 	position: sticky;
 	z-index: 1;
@@ -585,31 +585,31 @@ section h2 {
 	align-items: flex-end;
 }
 
-.medical_left_container img {
+.pcB_left_container img {
 	display: block;
 }
 
-.medical_posts_container {
+.pcB_posts_container {
 	width: 100%;
 	display: flex;
 	background-image: url('http://placehold.jp/150x50.png');
 	background-size: contain;
 }
 
-.medical_heading {
+.pcB_heading {
 	margin: 0 0 100px 0;
 	font-size: 5rem;
 	font-weight: bold;
 }
 
-.medical_main_text {
+.pcB_main_text {
 	display: inline-block;
 	background: #000;
 	color: #fff;
 	padding: 20px 30px;
 }
 
-.medical_main_text p {
+.pcB_main_text p {
 	margin: 0;
 	line-height: 1.8;
 	font-size: 1.5rem;
@@ -617,24 +617,24 @@ section h2 {
 	letter-spacing: 5px;
 }
 
-.medical_description {
+.pcB_description {
 	width: 75%;
 	padding: 50px 0 0 0;
 }
 
-.medical_description p {
+.pcB_description p {
 	line-height: 2;
 	color: #333;
 	font-size: 0.9rem;
 	margin-bottom: 30px;
 }
 
-.medical_read_more {
+.pcB_read_more {
 	margin: 100px 0 0 0;
 	padding-left: 20%;
 }
 
-.medical_read_more a::before {
+.pcB_read_more a::before {
 	display: inline-block;
 	content: '';
 	background: #000;
@@ -643,21 +643,21 @@ section h2 {
 	margin: 0 2rem 6px 0;
 }
 
-.medical_read_more a {
+.pcB_read_more a {
 	font-weight: bold;
 	letter-spacing: 7px;
 	color: #000;
 }
 
 
-/* ---------- medical_post ---------- */
-#medical_post{
+/* ----------  ---------- */
+#pcB_posts{
 	background-image: url(./imgs/Weed-Inc.png);
 	background-size: cover;
 	position: relative;
 }
 
-#medical_post::before{
+#pcB_posts::before{
 	content: "";
 	position: absolute;
 	display: block;
@@ -668,53 +668,53 @@ section h2 {
 
 @media(max-width: 1000px){
 
-	.news_right_container, .medical_left_container{
+	.pcA_right_container, .pcB_left_container{
 		width: 100%;
 		position: absolute;
 		margin-top: 80px;
 	}
 
-	.news_left_container, .medical_right_container{
+	.pcA_left_container, .pcB_right_container{
 		width: 100%;
 		display: block;
 	}
 
-	.news_right_container img, .medical_left_container img{
+	.pcA_right_container img, .pcB_left_container img{
 		width: 120%;
 	}
 
-	.news_heading, .medical_heading{
+	.pcA_heading, .pcB_heading{
 		font-size: 3rem;
 		margin-bottom: 224px;
 		text-align: center;
 	}
 
-	.news-inner, .medical-inner{
+	.pcA-inner, .pcB-inner{
 		width: 100%;
 		padding: 32px 0 48px 0;
 	}
 
-	.news_main_text, .medical_main_text{
+	.pcA_main_text, .pcB_main_text{
 		padding: 16px;
 		margin: 0 auto;
 		width: 84%;
 		display: block;
 	}
 
-	.news_description, .medical_description{
+	.pcA_description, .pcB_description{
 		width: 100%;
 		box-sizing: border-box;
 		padding: 16px;
 		display: none;
 	}
 
-	.news_read_more a::before,
-	.medical_read_more a::before{
+	.pcA_read_more a::before,
+	.pcB_read_more a::before{
 		width: 6rem;
 	}
 
-	.news_read_more,
-	.medical_read_more{
+	.pcA_read_more,
+	.pcB_read_more{
 		padding-left: 18%;
 		margin-top: 40px;
 	}
