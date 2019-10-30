@@ -8,8 +8,8 @@ statement
  position: relative;
  width: 100%;
  height: 100%;
- background-size: cover;
- background-position: center center;
+ background-size: cover !important;
+ background-position: center center !important;
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
@@ -194,7 +194,8 @@ statement
 
 @media(max-width:1500px){
   .stmt__text{
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.5;
   }
 
   .stmt__text--type_A{
@@ -206,8 +207,32 @@ statement
     font-size: 24px;
   }
 
+  .stmt__text--layout_A{
+    width: 580px;
+    left: 56px;
+  }
+
   .stmt__text--layout_B{
-    width: 721px;
+    width: 670px;
+    right: 56px;
+    bottom: 80px;
+  }
+
+  .stmt__text--layout_D{
+    line-height: 1.4;
+  }
+
+  .stmt__reference-img{
+    width: 400px;
+  }
+
+  .stmt__reference-img img{
+    width:40%;
+    height: auto;
+  }
+
+  .stmt__reference{
+    width: 480px;
   }
 }
 
