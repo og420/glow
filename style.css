@@ -666,6 +666,13 @@ section h2 {
 	background: rgba(120, 120, 120, 0.5);
 }
 
+@media(max-width: 1500px){
+	.pcA_read_more,
+	.pcB_read_more{
+		width: 100%;
+	}
+}
+
 @media(max-width: 1000px){
 
 	.pcA_right_container, .pcB_left_container{
@@ -717,6 +724,7 @@ section h2 {
 	.pcB_read_more{
 		padding-left: 18%;
 		margin-top: 40px;
+		width: 80%;
 	}
 
 	.other_posts_container{
