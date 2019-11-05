@@ -255,16 +255,16 @@ statement
   .stmt__text--type_A{
     font-size: 13px;
   }
-  
+
   .stmt__text--type_B{
     font-size: 15px;
   }
-  
+
   .stmt__text--type_C{
     font-size: 17px;
     letter-spacing: 0.3em;
   }
-  
+
   .stmt__text--type_D{
     font-size: 13px;
   }
