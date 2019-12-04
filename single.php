@@ -30,6 +30,9 @@ get_header();
   </div>
 
   <div class="s__article__content">
+    <p class="s__article__warning">
+    日本国内では大麻の栽培及び所持は違法行為であり、本メディアはそれら違法行為を容認又は助長することを目的とするものではありません。
+    </p>
     <?php the_content(); ?>
   </div>
 </article>
