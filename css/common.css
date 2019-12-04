@@ -406,6 +406,16 @@ html.scroll-prevent {
   color: #fff;
 }
 
+.footer__warning{
+  border: 1px solid red;
+  padding: 16px 48px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 5;
+}
+
 .footer__copyright{
   font-size: 12px;
   text-align: center;

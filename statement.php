@@ -286,7 +286,7 @@ Template Name: statement
         </div>
         <div  class="footer__otherLinks">
           <ul>
-            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>statement" target="_blank">当メディアについて</a>
+            <li><a href="<?php echo esc_url( home_url('/') ); ?>statement" target="_blank">当メディアについて</a>
             <li><a href="#" target="_blank">ご利用規約</a>
             <li><a href="#" target="_blank">プライバシーポリシー</a>
           </ul>
@@ -294,10 +294,13 @@ Template Name: statement
         </div>
       </div>
     </div>
+    <p class="footer__warning container">
+    日本国内では大麻の栽培及び所持は違法行為であり、本メディアはそれら違法行為を容認又は助長することを目的とするものではありません。
+    </p>
     <p class="footer__copyright">
       © GLOW All Rights Reserved.
     </p>
-	</footer>
+  </footer>
 </div>
 </div>
 <?php wp_footer(); ?>
