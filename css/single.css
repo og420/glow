@@ -142,6 +142,7 @@ single
   text-align: center;
   font-weight: bold;
   background: rgba(0,0,0,0.05);
+  box-sizing: border-box;
 }
 
 @media (max-width: 1000px){

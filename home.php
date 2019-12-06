@@ -3,6 +3,23 @@ get_header();
 ?>
 <section id='main'>
   <div class='mv_slide'>
+    <div class="mv__statementRead">
+      <div class='about_us_main_container about_us_main_container--position_mv'>
+        <p class="mv_slide_welcomeMessage">
+          WELCOME TO <span>GLOW</span>
+        </p>
+        <h3>大麻合法化の是非について考えることは、<br>あなた自身の幸福について考えることだ</h3>
+        <h5 class="mb30">誤解を恐れずに問いたい…この国に住む私たちは、今とても不幸なんじゃないか？</h5>
+        <p>「仕方ない…これが現実だ。」自分に言い聞かせる。いつしか、おかしいとさえ感じなくなってしまった。</p>
+        <h5 class='mb70'>でも、ほんの少しだけでいいから想像してみよう。<br>
+          もし仮に、私たちの想いが実現されるとしたら？
+        </h5>
+        <div class="mv_slide_readMore">
+          <div></div>
+          <a href="<?php echo esc_url( home_url('/') ); ?>statement">READ MORE</a>
+        </div>
+      </div>
+    </div>
     <?php
         $arg = array(
                   'posts_per_page' => 3, // 表示する件数
