@@ -58,6 +58,49 @@ statement
 	background: url(../imgs/stmt10.png);
 }
 
+@media(max-width: 800px){
+  .stmt--slide_1{
+    background: url(../imgs/stmt1-sp.png);
+    display: block;
+  }
+  
+  .stmt--slide_2{
+    background: url(../imgs/stmt2-sp.png);
+  }
+  
+  .stmt--slide_3{
+    background: url(../imgs/stmt3-sp.png);
+  }
+  
+  .stmt--slide_4{
+    background: url(../imgs/stmt4-sp.png);
+  }
+  
+  .stmt--slide_5{
+    background: url(../imgs/stmt5-sp.png);
+  }
+  
+  .stmt--slide_6{
+    background: url(../imgs/stmt6-sp.png);
+  }
+  
+  .stmt--slide_7{
+    background: url(../imgs/stmt7-sp.png);
+  }
+  
+  .stmt--slide_8{
+    background: url(../imgs/stmt8-sp.png);
+  }
+  
+  .stmt--slide_9{
+    background: url(../imgs/stmt9-sp.png);
+  }
+  
+  .stmt--slide_10{
+    background: url(../imgs/stmt10-sp.png);
+  }
+}
+
 .stmt__text{
 	color: #fff;
 	font-size: 16px;
